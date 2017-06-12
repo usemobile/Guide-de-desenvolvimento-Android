@@ -376,7 +376,7 @@ public static final String PRODUCT_DETAILS_FRAGMENT_TAG = "ProductDetailsFragmen
     view_special_button.xml
  ```
  
-* **3.4.** Definir os nomes dos drawables da seguinte forma:
+* **3.6.** Definir os nomes dos drawables da seguinte forma:
  
 | Tipo de ativos | Prefixo       | Exemplo       |
 | -------------  | ------------- | ------------- |
@@ -389,7 +389,7 @@ public static final String PRODUCT_DETAILS_FRAGMENT_TAG = "ProductDetailsFragmen
 | Notification   | `notification_` | `notification_bg.png` |
 | Tabs           | `tab_`        | `tab_pressed.png` |
  
-* **3.5.** Para os ativos que possuem estados, adicionar os estados no final do nome da seguinte forma:
+* **3.7.** Para os ativos que possuem estados, adicionar os estados no final do nome da seguinte forma:
  
 | Estado         | Sufixo        | Exemplo       |
 | -------------  | ------------- | ------------- |
@@ -399,7 +399,7 @@ public static final String PRODUCT_DETAILS_FRAGMENT_TAG = "ProductDetailsFragmen
 | Disabled | `_disabled` | `btn_accept_disabled.png` |
 | Selected | `_selected` | `btn_accept_selected.png` |
  
-* **3.6.** Constantes devem sempre ter todas as letras maiúsculas e separadas por _.
+* **3.8.** Constantes devem sempre ter todas as letras maiúsculas e separadas por _.
 ```java
 //Certo
 static final String USE_NAME = "UseMobile";
@@ -408,7 +408,7 @@ static final String USE_NAME = "UseMobile";
 static final String use_Name = "UseMobile";
 ```
  
-* **3.7.** A nomeação de alguns elementos devem ser especiais. Seguir o seguinte padrão para os seguintes elementos:
+* **3.9.** A nomeação de alguns elementos devem ser especiais. Seguir o seguinte padrão para os seguintes elementos:
  
 | Elemento         | Prefixo        | Exemplo       |
 | -------------  | ------------- | ------------- |
@@ -418,17 +418,17 @@ static final String use_Name = "UseMobile";
 | Intent Extra | `EXTRA_` | `EXTRA_INTENT` |
 | Intent Action | `ACTION_` | `ACTION_USER_ACTION` |
  
-## 3. Estilo de Código
+## 4. Estilo de Código
  
-### 3.1. Geral
+### 4.1. Geral
  
-**3.1.1** Evitar criar variáveis globais a não ser que seja estritamente necessário.
+* **4.1.1.** Evitar criar variáveis globais a não ser que seja estritamente necessário.
  
-**3.1.2** Utilizar ao máximo as funções já existentes do Java. Não há necessidade de escrever código de ordenação, por exemplo.
+* **4.1.2.** Utilizar ao máximo as funções já existentes do Java. Não há necessidade de escrever código de ordenação, por exemplo.
  
-**3.1.3** Quebrar as linhas quando o conteúdo for muito grande.
+* **4.1.3.** Quebrar as linhas quando o conteúdo for muito grande.
  
-**3.1.4**Deixar os overrides na mesma ordem do ciclo de vida da activity/fragment. Por exemplo:
+* **4.1.4**Deixar os overrides na mesma ordem do ciclo de vida da activity/fragment. Por exemplo:
 ```java
 public class MainActivity extends Activity {
  
@@ -448,13 +448,13 @@ public class MainActivity extends Activity {
 }
 ```
  
-* **3.1.5** ?????? Bibliotecas override fica por último
+* **4.1.5.** ?????? Bibliotecas override fica por último
  
-* **3.1.6** Escreva `this.` sempre dentro de uma classe sempre que for acessar ou modificar um parâmetro próprio da classe.
+* **4.1.6.** Escreva `this.` sempre dentro de uma classe sempre que for acessar ou modificar um parâmetro próprio da classe.
  
-### 3.2. Switch/If
+### 4.2. Switch/If
  
-* **3.2.1** Switch - Não usar o default caso ele não exista. Por exemplo:
+* **4.2.1.** Switch - Não usar o default caso ele não exista. Por exemplo:
 ```java
  
 switch (expression) {
@@ -470,7 +470,7 @@ switch (expression) {
            break;
 }
 ```
-* **3.2.2** If- Não usar chaves para comandos de apenas uma linha. Por exemplo:
+* **4.2.2.** If- Não usar chaves para comandos de apenas uma linha. Por exemplo:
 ```java
  
 //CERTO
@@ -494,17 +494,17 @@ if (expression) a=b;
  
  
 ```
-### 3.3. Comentários
-* **3.3.1** Comente qualquer parte do código que pareça estranha ou intimidante para um novo desenvolvedor.
+### 4.3. Comentários
+* **4.3.1.** Comente qualquer parte do código que pareça estranha ou intimidante para um novo desenvolvedor.
  
-* **3.3.2** Use //TODO em todas as partes do código que foram deixadas incompletas intencionalmente.
+* **4.3.2.** Use //TODO em todas as partes do código que foram deixadas incompletas intencionalmente.
  
-* **3.3.3** Usar comentários em bloco apenas para o javadoc em classes, interfaces, variáveis ou declaração de métodos.
+* **4.3.3.** Usar comentários em bloco apenas para o javadoc em classes, interfaces, variáveis ou declaração de métodos.
  
-* **3.3.4** Utilizar Javadoc em funções mais complexas, e em bibliotecas que serão utilizadas por outras pessoas além de você.
+* **4.3.4.** Utilizar Javadoc em funções mais complexas, e em bibliotecas que serão utilizadas por outras pessoas além de você.
  
-### 3.4. Tratamento de exceções
-* **3.4.1** Tratar cada exceção de maneira isolada, nunca fazer genérico. Nunca faça isso:
+### 4.4. Tratamento de exceções
+* **4.4.1.** Tratar cada exceção de maneira isolada, nunca fazer genérico. Nunca faça isso:
 ```java
  
 try {
@@ -517,17 +517,17 @@ try {
  
 ```
  
-### 3.5. Imports
-* **3.5.1**     - Importar sempre bibliotecas específicas (não usar com *):
+### 4.5. Imports
+* **4.5.1.**     - Importar sempre bibliotecas específicas (não usar com *):
 ``` java
 import foo.*; // errado
 import foo.Bar; // certo
 ```
  
-### 3.6. Strings e Colors
-* **3.6.1** Sempre colocar no arquivo xml correspondente.
+### 4.6. Strings e Colors
+* **4.6.1.** Sempre colocar no arquivo xml correspondente.
  
-* **3.6.2** Padrão de prefixos String:
+* **4.6.2.** Padrão de prefixos String:
  
 | Prefixo         | Descrição       |
 | -------------  | ------------- |
@@ -536,17 +536,17 @@ import foo.Bar; // certo
 | title_ | Título de alguma coisa |
 | action_| Alguma ação como "Salvar" |
  
-### 3.7. Pacotes
+### 4.7. Pacotes
  
-* **3.7.1** Cada pacote reservado para uma activity. Por exemplo:
+* **4.7.1.** Cada pacote reservado para uma activity. Por exemplo:
  
 ![print](https://user-images.githubusercontent.com/22510341/27050944-bcd2af94-4f8a-11e7-9b9c-f21925287ecc.png)
  
  
  
-### 3.8. Parâmetros
+### 4.8. Parâmetros
  
-* **3.8.1** O Context sempre virá como o primeiro parâmetro e o Callback será o último. Por exemplo:
+* **4.8.1.** O Context sempre virá como o primeiro parâmetro e o Callback será o último. Por exemplo:
  
  
 ```java
