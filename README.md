@@ -448,7 +448,13 @@ public class MainActivity extends Activity {
 }
 ```
  
-* **4.1.5.** ?????? Bibliotecas override fica por último
+* **4.1.5.** As funções que utilizam bibliotecas próprias feitas pela Use devem vim por último. Por exemplo esta função que utiliza uma biblioteca para alterar fontes, deve ser colocada no final das declarações da classe:
+```java
+    @Override
+    protected void attachBaseContext(Context newBase){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+```
  
 * **4.1.6.** Escreva `this.` sempre dentro de uma classe sempre que for acessar ou modificar um parâmetro próprio da classe.
  
