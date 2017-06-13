@@ -475,7 +475,7 @@ switch (expression) {
                // default code
            break;
 }
-
+ 
 //ERRADO
 switch (expression) {
            case 1:
@@ -589,11 +589,16 @@ public void loadUserAsync(Context context, UserCallback callback, int userId);
  
 ## 5. Git
 * **5.1.** Ao utilizar o GIT o ideal é trabalhar com diversas branches ao mesmo tempo. Desta forma cria-se uma branch para cada nova *feature* que for adicionada ao projeto. Além disso, deve-se trabalhar sempre nas branches e uitlizar a *Master* apenas para fazer o merge de todas as branches já testadas. Isso evita subir bugs para a *Master*.
-
+ 
 * **5.2.** Ao commitar no GIT utilizar o seguinte padrão de nomenclatura: *NomeDaClasse: alterações realizadas*.
-
+ 
+![whatsapp image 2017-06-13 at 11 17 32](https://user-images.githubusercontent.com/22510341/27086965-1d2780c8-502a-11e7-8aef-d37fadbae3bf.jpeg)
+ 
 * **5.3.** Fazer commit após ter realizado alterações significativas no código. Fazer o push ao completar determinada tarefa ou ao fim do dia.
-
+ 
+ 
+ 
+ 
  
  
  
