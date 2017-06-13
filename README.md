@@ -134,8 +134,8 @@ public void onCreate(Bundle savedInstanceState) {
 ```java
 //Certo
 void useFunction(int p1,
-                  int p2,
-                  int p3);
+                 int p2,
+                 int p3);
                  
  
 //Errado
@@ -171,8 +171,6 @@ if (x == firstReallyReallyLongPredicateFunction()
         // do something
 }
                  
-//Errado
-AlertDialog.Builder builder = new AlertDialog.Builder(context).setTitle("MyTitle").setMessage("MyMessage").setView(customView);
 ```
  
 ## 2. Organização das classes
@@ -339,7 +337,7 @@ private void UseFunction();
 * **3.2.** Utilizar UpperCamelCase para os nomes das classes. Para as *activities* e *fragments* utilizar o padrão
 *nomeActivity* ou *nomeFragment*.
  
-* **3.3.** Nomes devem ser sempres descritivos. Se para isso eles tenha que ser longos é extremamente aceitável. No dê a variáveis ou métodos nomes genéricos, a não ser que o propósito seja genérico.
+* **3.3.** Nomes devem ser sempres descritivos. Se para isso eles tenha que ser longos é extremamente aceitável. Não dê a variáveis ou métodos nomes genéricos, a não ser que o propósito seja genérico.
 ```java
 //Certo
 public TextView getTitleTextView() {
@@ -370,6 +368,8 @@ public static final String PRODUCT_DETAILS_FRAGMENT_TAG = "ProductDetailsFragmen
         * `view` - para layouts que são usados como uma peça de uma custom view.
         * Caso não seja nenhum dos itens acima, usar algo que descreva o uso de uma maneira similar às mostradas acima.
         
+ Exemplos:
+ 
  ```java
     activity_home.xml
     list_item_product.xml
@@ -428,7 +428,7 @@ static final String use_Name = "UseMobile";
  
 * **4.1.3.** Quebrar as linhas quando o conteúdo for muito grande.
  
-* **4.1.4**Deixar os overrides na mesma ordem do ciclo de vida da activity/fragment. Por exemplo:
+* **4.1.4.** Deixar os overrides na mesma ordem do ciclo de vida da activity/fragment. Por exemplo:
 ```java
 public class MainActivity extends Activity {
  
@@ -448,7 +448,7 @@ public class MainActivity extends Activity {
 }
 ```
  
-* **4.1.5.** As funções que utilizam bibliotecas próprias feitas pela Use devem vim por último. Por exemplo esta função que utiliza uma biblioteca para alterar fontes, deve ser colocada no final das declarações da classe:
+* **4.1.5.** As funções que utilizam bibliotecas externas devem vir por último. Por exemplo esta função que utiliza uma biblioteca para alterar fontes, deve ser colocada no final das declarações da classe:
 ```java
     @Override
     protected void attachBaseContext(Context newBase){
@@ -462,7 +462,7 @@ public class MainActivity extends Activity {
  
 * **4.2.1.** Switch - Não usar o default caso ele não exista. Por exemplo:
 ```java
- 
+//CERTO 
 switch (expression) {
            case 1:
                // case 1 code
@@ -473,6 +473,20 @@ switch (expression) {
            break;
            default:
                // default code
+           break;
+}
+
+//ERRADO
+switch (expression) {
+           case 1:
+               // case 1 code
+           break;
+           case 2: // fall-through
+           case 3:
+               // code executed for values 2 and 3
+           break;
+           default:
+               // without code
            break;
 }
 ```
