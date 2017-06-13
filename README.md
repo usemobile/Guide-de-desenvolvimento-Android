@@ -558,7 +558,7 @@ import foo.Bar; // certo
  
 ### 4.7. Pacotes
  
-* **4.7.1.** Cada pacote reservado para uma activity. Por exemplo:
+* **4.7.1.** Cada pacote reservado para uma activity / fragment. Por exemplo:
  
 ![print](https://user-images.githubusercontent.com/22510341/27050944-bcd2af94-4f8a-11e7-9b9c-f21925287ecc.png)
  
@@ -588,9 +588,12 @@ public void loadUserAsync(Context context, UserCallback callback, int userId);
   
  
 ## 5. Git
-### 5.1 Trabalhar no branch.
-### 5.2 Commit apenas na master.
-### 5.3 Comentar o nome da classe que alterou e descrever a alteração.
+* **5.1.** Ao utilizar o GIT o ideal é trabalhar com diversas branches ao mesmo tempo. Desta forma cria-se uma branch para cada nova *feature* que for adicionada ao projeto. Além disso, deve-se trabalhar sempre nas branches e uitlizar a *Master* apenas para fazer o merge de todas as branches já testadas. Isso evita subir bugs para a *Master*.
+
+* **5.2.** Ao commitar no GIT utilizar o seguinte padrão de nomenclatura: *NomeDaClasse: alterações realizadas*.
+
+* **5.3.** Fazer commit após ter realizado alterações significativas no código. Fazer o push ao completar determinada tarefa ou ao fim do dia.
+
  
  
  
