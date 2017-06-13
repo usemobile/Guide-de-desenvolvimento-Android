@@ -11,7 +11,7 @@ Alguns dos padrões que aqui podem ser observados podem opor os padrões seguido
  
 Esse guia de estilo foi feito com base no que encontramos de mais relevante em guias de estilo utilizados no mercado em conjunto com a experiência da nossa equipe.
  
-Dito isso, esse é um documento que será atualizado constantemente, à medida que nossa equipe e a linguagem Java evoluam, nossas práticas irão se adaptar acompanhando essas mudanças. Esse guia foi atualizado pela última vez em _ de _ de 2017.
+Dito isso, esse é um documento que será atualizado constantemente, à medida que nossa equipe e a linguagem Java evoluam, nossas práticas irão se adaptar acompanhando essas mudanças. Esse guia foi atualizado pela última vez em 13 de Junho de 2017.
  
  
 ## 1. Formatação de código
