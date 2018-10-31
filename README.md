@@ -11,7 +11,7 @@ Alguns dos padrões que aqui podem ser observados podem opor os padrões seguido
  
 Esse guia de estilo foi feito com base no que encontramos de mais relevante em guias de estilo utilizados no mercado em conjunto com a experiência da nossa equipe.
  
-Dito isso, esse é um documento que será atualizado constantemente, à medida que nossa equipe e a linguagem Java evoluam, nossas práticas irão se adaptar acompanhando essas mudanças. Esse guia foi atualizado pela última vez em 13 de Junho de 2017.
+Dito isso, esse é um documento que será atualizado constantemente, à medida que nossa equipe e a linguagem Java evoluam, nossas práticas irão se adaptar acompanhando essas mudanças. Esse guia foi atualizado pela última vez em 31 de Novembro de 2018.
  
  
 ## 1. Formatação de código
@@ -20,33 +20,26 @@ Dito isso, esse é um documento que será atualizado constantemente, à medida q
  
 ![whatsapp image 2017-06-12 at 16 30 02](https://user-images.githubusercontent.com/22510341/27051474-a672ea46-4f8c-11e7-94a8-d65678aa3cb5.jpeg)
  
-* **1.2.** Utilizar o comando de indentação do Android Studio, e não alterar nada depois. O comando pode ser feito com o atalho ***Ctrl+ alt + l*** no Windows, ***Ctrl + shift + alt + l*** no Linux e ***option + command + l*** no Mac.
- 
-* **1.3.** A abertura de chaves deve seguir na mesma linha da Classe, método, função e etc.
+* **1.2.** Sempre utilizar o comando de indentação do Android Studio, com ele chaves, parenteses, separadores e operadores se organizam automaticamente. O comando pode ser feito com o atalho ***Ctrl+ alt + l*** no Windows, ***Ctrl + shift + alt + l*** no Linux e ***option + command + l*** no Mac.
 ```java
 //Certo
-class UseClass{
-    private void useMethod(){
-        if(x == y){
-            //código
-        }
+void useFunction(int p1, int p2, int p3){
+    if (1 + 1 == 3) {
+        //Código
     }
 }
  
 //Errado
-class UseClass
+void useFunction(int p1,int p2,int p3)
 {
-    private void useMethod()
+    if(1+1==3) 
     {
-        if (x == y)
-        {
-            //código
-        }
+        //Código
     }
-}   
+}
 ```
- 
-* **1.4.** Todas as funções devem ser separadas uma da outra por uma linha vazia.
+  
+* **1.3.** Todas as funções devem ser separadas uma da outra por uma linha vazia.
 ```java
 // Certo
 class UseClass{
@@ -74,38 +67,7 @@ class UseClass{
 }
 ```
  
-* **1.5.** Ao usar vírgula (' , ') deve ser adicionado um espaço depois e não conter espaço algum antes.
- 
-```java
-//Certo
-void useFunction(int p1, int p2, int p3){
-    /** **/
-}
- 
-//Errado
-void useFunction(int p1,int p2,int p3){
-    /** **/
-}
-```
- 
-* **1.6.** Inserir um espaço antes e depois de operadores binários ('+ , -, /, e etc') e conter um espaço antes de abrir parênteses e um depois de fechar.
-```java
-//Certo
-int useConstant = 5 + (10 / 2) * 6 - 10;
- 
-if (1 + 1 == 3) {
-    //Código
-}
- 
-//Errado
-int useConstant = 5+(10/2)*6-10;
- 
-if(1+1==3) {
-    //Código
-}
-```
- 
-* **1.7** Nunca use mais de uma linha em branco consecutiva. Use uma linha de separação em branco para separar áreas dos códigos com contextos diferentes. NUNCA use uma nova linha em branco depois de abrir uma chave.
+* **1.4.** Nunca use mais de uma linha em branco consecutiva. Use uma linha de separação em branco para separar áreas dos códigos com contextos diferentes. NUNCA use uma nova linha em branco depois de abrir uma chave.
 ```java
 //Certo
 public void onCreate(Bundle savedInstanceState) {
@@ -129,20 +91,8 @@ public void onCreate(Bundle savedInstanceState) {
         // set up bar object
         Bar bar = new Bar(foo);}
 ```
- 
-* **1.8.** Quando chamar função de múltiplos parâmetros, colocar cada parâmetro em um linha.
-```java
-//Certo
-void useFunction(int p1,
-                 int p2,
-                 int p3);
-                 
- 
-//Errado
-void useFunction(int p1, int p2, int p3);
-```
- 
-* **1.9.** Para linhas grandes sempre quebre-as antes de uma chamada de método, depois de vírgulas ou depois de um operador.
+  
+* **1.5.** Para linhas grandes sempre quebre-as antes de uma chamada de método, depois de vírgulas ou depois de um operador.
 ```java
 //Certo
 AlertDialog.Builder builder = new AlertDialog.Builder(context)
@@ -154,7 +104,7 @@ AlertDialog.Builder builder = new AlertDialog.Builder(context)
 AlertDialog.Builder builder = new AlertDialog.Builder(context).setTitle("MyTitle").setMessage("MyMessage").setView(customView);
 ```
  
-* **1.10.** Usar constantes locais ou outras técnicas de mitigação para evitar múltiplas linhas.
+* **1.6.** Usar constantes locais ou outras técnicas de mitigação para evitar múltiplas linhas.
 ```java
 //Certo
 boolean firstCondition = x == firstReallyReallyLongPredicateFunction();
